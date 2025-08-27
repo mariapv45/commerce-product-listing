@@ -1,7 +1,7 @@
 export default function NavBar() {
   return (
-    <header className='border-border sticky top-0 z-50 w-full border-b bg-stone-900'>
-      <div className='container px-2 py-6'>
+    <header className='border-border sticky top-0 z-50 w-full border-b bg-stone-950'>
+      <div className='container px-2 pt-4 pb-6'>
         <div className='flex items-end'>
           <img
             src='/images/branding/beer-stein.webp'
