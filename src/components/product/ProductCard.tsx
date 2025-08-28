@@ -9,8 +9,6 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   const formattedProductName = formatProductName(product.productName);
 
-  console.log(formattedProductName);
-
   return (
     <div className='bg-card border-border relative rounded-lg border p-4 transition-shadow hover:shadow-lg'>
       {product.isSale && (

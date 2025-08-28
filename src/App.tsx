@@ -4,9 +4,9 @@ import Footer from '@/components/layout/Footer';
 
 function App() {
   return (
-    <div className='bg-background min-h-screen'>
+    <div className='bg-background flex min-h-screen flex-col'>
       <NavBar />
-      <main>
+      <main className='flex-1'>
         <ProductGrid />
       </main>
       <Footer />
