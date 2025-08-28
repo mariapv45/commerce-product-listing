@@ -35,10 +35,13 @@ describe('useProducts', () => {
     expect(result.current.products).toEqual([]);
     expect(result.current.error).toBe(null);
 
-    // Wait for fetch to complete
-    await waitFor(() => {
-      expect(result.current.loading).toBe(false);
-    });
+    // Wait for fetch to complete (with longer timeout for the 1s delay)
+    await waitFor(
+      () => {
+        expect(result.current.loading).toBe(false);
+      },
+      { timeout: 1500 }
+    );
 
     expect(result.current.products).toEqual(mockProducts);
     expect(result.current.error).toBe(null);
@@ -50,9 +53,12 @@ describe('useProducts', () => {
 
     const { result } = renderHook(() => useProducts());
 
-    await waitFor(() => {
-      expect(result.current.loading).toBe(false);
-    });
+    await waitFor(
+      () => {
+        expect(result.current.loading).toBe(false);
+      },
+      { timeout: 2000 }
+    );
 
     expect(result.current.products).toEqual([]);
     expect(result.current.error).toBe('Failed to fetch');
