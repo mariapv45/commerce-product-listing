@@ -85,7 +85,7 @@ export default function ProductFilters({
                   className='flex-1 justify-between sm:w-48'
                 >
                   {selectedFilters.length === 0
-                    ? 'All Types'
+                    ? 'All'
                     : `Filters (${selectedFilters.length})`}
                   <ChevronDown className='h-4 w-4' />
                 </Button>
